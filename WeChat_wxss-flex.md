@@ -50,10 +50,106 @@
 &ensp;&ensp;&ensp; 2.弹性元素的排列方式也会发生改变，因为**弹性元素永远沿主轴排列**。
 
 <p align="center">
-<img src="https://github.com/dreamofTaotao/StudyNotes/blob/master/Photos/Flex%E5%BC%B9%E6%80%A7%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.jpeg" alt="Sample"  width="500" height="320">
+<img src="https://github.com/dreamofTaotao/StudyNotes/blob/master/Photos/flex-direction-row.gif" alt="Sample"  width="500" height="320">
+	<p align="center">
+	<em>flex-direction:row</em>
+	</p>
+</p>
+
+<p align="center">
+<img src="https://github.com/dreamofTaotao/StudyNotes/blob/master/Photos/flex-direction-column.gif" alt="Sample"  width="500" height="320">
+	<p align="center">
+	<em>flex-direction:column</em>	
+	</p>
+</p>
+
+<p align="center">
+<img src="https://github.com/dreamofTaotao/StudyNotes/blob/master/Photos/flex-direction-row-reverse.gif" alt="Sample"  width="500" height="320">
+	<p align="center">
+	<em>flex-direction:row-reverse</em>		
+	</p>
+</p>
+
+<p align="center">
+<img src="https://github.com/dreamofTaotao/StudyNotes/blob/master/Photos/flex-direction-column-reverse.gif" alt="Sample"  width="500" height="320">
+	<p align="center">
+	<em>flex-direction:column-reverse</em>	
+	</p>
+</p>
+
+#### 2.沿主轴的排列处理
+弹性元素永远沿主轴排列，那么如果主轴排不下，该如何处理？
+
+<p align="center">
+<img src="https://github.com/dreamofTaotao/StudyNotes/blob/master/Photos/%E4%B8%BB%E8%BD%B4%E6%8E%92%E5%88%97%E5%A4%84%E7%90%86.jpeg" alt="Sample"  width="500" height="320">
 	<p align="center">
 	</p>
 </p>
+
+通过设置`flex-wrap: nowrap | wrap | wrap-reverse`可使得主轴上的元素不折行、折列、反向折行。
+
+默认是`nowrap`不折行，难道任由元素直接溢出容器吗？当然不会，那么这里就设计到了元素的弹性伸缩应对。
+
+`wrap`折行，顾名思义就是另起一行，那么折行之后行与行之间的间距（对齐）怎么调整？这里又设计到了交叉轴上的多行对齐。
+
+`wrap-reverse`反向折行，是从容器底部开始的折行，单每个元素之间的排列仍保留正向。
+
+<p align="center">
+<img src="https://github.com/dreamofTaotao/StudyNotes/blob/master/Photos/%E4%B8%BB%E8%BD%B4%E6%8E%92%E5%88%97%E5%A4%84%E7%90%861.jpeg" alt="Sample"  width="500" height="320">
+	<p align="center">
+	</p>
+</p>
+
+#### 3.一个复合属性
+`flex-flow = flex - direction + flex-wrap`
+
+`flex-flow`相当于规定了flex布局的“工作流（flow）”
+
+`flex-flow : row nowrap;`
+
+### 三、元素如何弹性伸缩应对
+&ensp;&ensp;&ensp; `flex-wrap:nowrap;`不折行时，容器宽度有剩余/不够分，弹性元素们该怎么“弹性”地伸缩应对？这里针对上面的两种场景，引入两个属性（徐应用在弹性元素上）
+
+&ensp;&ensp;&ensp; 1.`flex-shrink`：缩小比例（容器宽度<元素总宽度时如何收缩）
+
+&ensp;&ensp;&ensp; 2.`flex-grow`：放大比例（容器宽度>元素总宽度时如何伸展）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
